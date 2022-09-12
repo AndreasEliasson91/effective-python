@@ -14,9 +14,9 @@ The previous pylint score were from Visual Studio Code. When I run pylint in PyC
 and with no other adjustments, I got 4.18.
 
 EXERCISE 04:
-I created two classes, Player and TennisGame. I did this to separate attributes
-and responsibilities.
+I created two classes, Player and TennisGame. I did this to separate attributes and responsibilities.
 
-Player is a basic dataclass, containing only attributes, getters and setters.
+Player is a basic dataclass, containing only attributes, getters and setters. This class only accesses the name and score for each player.
 
-TennisGame have only three attributes, two Player objects and a list with valid inputs (based on the players names)
+TennisGame have only three attributes, two Player objects and a list with valid inputs (based on the players names).
+This class has the responsibility print and update results and who scores.

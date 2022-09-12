@@ -207,6 +207,20 @@ class TennisGame:
 
         del temp_points_p1, temp_points_p2
 
+    def get_who_scored(self) -> int or None:
+        """Method to see if the input is valid or not
+
+        Returns:
+            int or None: The index of the scoring player or None
+        """
+        who_scored = input('Enter the name on the player that scored:\n>> ')
+
+        # Get the input from valid_inputs list
+        if who_scored.lower() in self.valid_inputs:
+            return self.valid_inputs.index(who_scored.lower())
+
+        return None
+
     def run(self) -> None:
         """Method to start and run the application.
 
@@ -225,27 +239,11 @@ class TennisGame:
                     # If the index is on the lower half of the valid inputs list, player one scores
                     if scorer < (len(self.valid_inputs) / 2):
                         self.player_scored(self.player_one.name)
-                    else:
-                        self.player_scored(self.player_two.name)
                 else:
-                    print(scorer)
+                    print('Invalid name input.\n')
                     continue
 
             print(self.result())
-
-    def get_who_scored(self) -> int or str:
-        """Method to see if the input is valid or not
-
-        Returns:
-            int or str: The index of the scoring player or invalid input message
-        """
-        who_scored = input('Enter the name on the player that scored:\n>> ')
-
-        # Get the input from valid_inputs list
-        if who_scored.lower() in self.valid_inputs:
-            return self.valid_inputs.index(who_scored.lower())
-
-        return 'Invalid name input.\n'
 
 
 if __name__ == '__main__':
