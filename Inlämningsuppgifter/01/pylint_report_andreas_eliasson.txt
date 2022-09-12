@@ -1,0 +1,22 @@
+EXERCISE 01-02:
+Before I added docstrings (I used the Google style) and comments the score I got was 1.88/10, and afterwards I got 2.77/10.
+
+The biggest flaws in the code, according to pylint, are:
+    - Variable/Attribute/Method names doesn't conform to snake_case (occurs on 36 occasions)
+    - Unnecessary parens after 'if'/'elif' keyword (occurs on 22 occasions)
+    - Trailing whitespaces (occurs on 19 occasions)
+    - Unused variables or too many branches/statements issues (occurs on 4 occasions)
+
+So adding the docstrings increased the score with 0.89
+
+NOTE:
+The previous pylint score were from Visual Studio Code. When I run pylint in PyCharm, after I only added the main()
+and with no other adjustments, I got 4.18.
+
+EXERCISE 04:
+I created two classes, Player and TennisGame. I did this to separate attributes
+and responsibilities.
+
+Player is a basic dataclass, containing only attributes, getters and setters.
+
+TennisGame have only three attributes, two Player objects and a list with valid inputs (based on the players names)
