@@ -1,0 +1,273 @@
+Filename: C:\Users\andre\code\projects\python\effektiv-pythonprogrammering\09-15\memory_log.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    16     19.8 MiB     19.8 MiB           1   @memory_profiler.profile(stream=log)
+    17                                         def fib_seq(n):
+    18     19.8 MiB      0.0 MiB           1       seq = []
+    19     19.8 MiB      0.0 MiB           1       if n > 0:
+    20                                                 seq.extend(fib_seq(n - 1))
+    21     19.8 MiB      0.0 MiB           1       seq.append(fib(n))
+    22     19.8 MiB      0.0 MiB           1       return seq
+
+
+Filename: C:\Users\andre\code\projects\python\effektiv-pythonprogrammering\09-15\memory_log.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    16     19.8 MiB     19.8 MiB           2   @memory_profiler.profile(stream=log)
+    17                                         def fib_seq(n):
+    18     19.8 MiB      0.0 MiB           2       seq = []
+    19     19.8 MiB      0.0 MiB           2       if n > 0:
+    20     19.8 MiB      0.0 MiB           1           seq.extend(fib_seq(n - 1))
+    21     19.8 MiB      0.0 MiB           2       seq.append(fib(n))
+    22     19.8 MiB      0.0 MiB           2       return seq
+
+
+Filename: C:\Users\andre\code\projects\python\effektiv-pythonprogrammering\09-15\memory_log.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    16     19.8 MiB     19.8 MiB           3   @memory_profiler.profile(stream=log)
+    17                                         def fib_seq(n):
+    18     19.8 MiB      0.0 MiB           3       seq = []
+    19     19.8 MiB      0.0 MiB           3       if n > 0:
+    20     19.8 MiB      0.0 MiB           2           seq.extend(fib_seq(n - 1))
+    21     19.8 MiB      0.0 MiB           3       seq.append(fib(n))
+    22     19.8 MiB      0.0 MiB           3       return seq
+
+
+Filename: C:\Users\andre\code\projects\python\effektiv-pythonprogrammering\09-15\memory_log.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    16     19.8 MiB     19.8 MiB           4   @memory_profiler.profile(stream=log)
+    17                                         def fib_seq(n):
+    18     19.8 MiB      0.0 MiB           4       seq = []
+    19     19.8 MiB      0.0 MiB           4       if n > 0:
+    20     19.8 MiB      0.0 MiB           3           seq.extend(fib_seq(n - 1))
+    21     19.8 MiB      0.0 MiB           4       seq.append(fib(n))
+    22     19.8 MiB      0.0 MiB           4       return seq
+
+
+Filename: C:\Users\andre\code\projects\python\effektiv-pythonprogrammering\09-15\memory_log.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    16     19.8 MiB     19.8 MiB           5   @memory_profiler.profile(stream=log)
+    17                                         def fib_seq(n):
+    18     19.8 MiB      0.0 MiB           5       seq = []
+    19     19.8 MiB      0.0 MiB           5       if n > 0:
+    20     19.8 MiB      0.0 MiB           4           seq.extend(fib_seq(n - 1))
+    21     19.8 MiB      0.0 MiB           5       seq.append(fib(n))
+    22     19.8 MiB      0.0 MiB           5       return seq
+
+
+Filename: C:\Users\andre\code\projects\python\effektiv-pythonprogrammering\09-15\memory_log.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    16     19.8 MiB     19.8 MiB           6   @memory_profiler.profile(stream=log)
+    17                                         def fib_seq(n):
+    18     19.8 MiB      0.0 MiB           6       seq = []
+    19     19.8 MiB      0.0 MiB           6       if n > 0:
+    20     19.8 MiB      0.0 MiB           5           seq.extend(fib_seq(n - 1))
+    21     19.8 MiB      0.0 MiB           6       seq.append(fib(n))
+    22     19.8 MiB      0.0 MiB           6       return seq
+
+
+Filename: C:\Users\andre\code\projects\python\effektiv-pythonprogrammering\09-15\memory_log.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    16     19.8 MiB     19.8 MiB           7   @memory_profiler.profile(stream=log)
+    17                                         def fib_seq(n):
+    18     19.8 MiB      0.0 MiB           7       seq = []
+    19     19.8 MiB      0.0 MiB           7       if n > 0:
+    20     19.8 MiB      0.0 MiB           6           seq.extend(fib_seq(n - 1))
+    21     19.8 MiB      0.0 MiB           7       seq.append(fib(n))
+    22     19.8 MiB      0.0 MiB           7       return seq
+
+
+Filename: C:\Users\andre\code\projects\python\effektiv-pythonprogrammering\09-15\memory_log.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    16     19.8 MiB     19.8 MiB           8   @memory_profiler.profile(stream=log)
+    17                                         def fib_seq(n):
+    18     19.8 MiB      0.0 MiB           8       seq = []
+    19     19.8 MiB      0.0 MiB           8       if n > 0:
+    20     19.8 MiB      0.0 MiB           7           seq.extend(fib_seq(n - 1))
+    21     19.8 MiB      0.0 MiB           8       seq.append(fib(n))
+    22     19.8 MiB      0.0 MiB           8       return seq
+
+
+Filename: C:\Users\andre\code\projects\python\effektiv-pythonprogrammering\09-15\memory_log.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    16     19.8 MiB     19.8 MiB           9   @memory_profiler.profile(stream=log)
+    17                                         def fib_seq(n):
+    18     19.8 MiB      0.0 MiB           9       seq = []
+    19     19.8 MiB      0.0 MiB           9       if n > 0:
+    20     19.8 MiB      0.0 MiB           8           seq.extend(fib_seq(n - 1))
+    21     19.8 MiB      0.0 MiB           9       seq.append(fib(n))
+    22     19.8 MiB      0.0 MiB           9       return seq
+
+
+Filename: C:\Users\andre\code\projects\python\effektiv-pythonprogrammering\09-15\memory_log.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    16     19.8 MiB     19.8 MiB          10   @memory_profiler.profile(stream=log)
+    17                                         def fib_seq(n):
+    18     19.8 MiB      0.0 MiB          10       seq = []
+    19     19.8 MiB      0.0 MiB          10       if n > 0:
+    20     19.9 MiB      0.0 MiB           9           seq.extend(fib_seq(n - 1))
+    21     19.9 MiB      0.0 MiB          10       seq.append(fib(n))
+    22     19.9 MiB      0.0 MiB          10       return seq
+
+
+Filename: C:\Users\andre\code\projects\python\effektiv-pythonprogrammering\09-15\memory_log.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    16     19.8 MiB     19.8 MiB          11   @memory_profiler.profile(stream=log)
+    17                                         def fib_seq(n):
+    18     19.8 MiB      0.0 MiB          11       seq = []
+    19     19.8 MiB      0.0 MiB          11       if n > 0:
+    20     19.9 MiB      0.0 MiB          10           seq.extend(fib_seq(n - 1))
+    21     19.9 MiB      0.0 MiB          11       seq.append(fib(n))
+    22     19.9 MiB      0.0 MiB          11       return seq
+
+
+Filename: C:\Users\andre\code\projects\python\effektiv-pythonprogrammering\09-15\memory_log.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    16     19.8 MiB     19.8 MiB          12   @memory_profiler.profile(stream=log)
+    17                                         def fib_seq(n):
+    18     19.8 MiB      0.0 MiB          12       seq = []
+    19     19.8 MiB      0.0 MiB          12       if n > 0:
+    20     19.9 MiB      0.0 MiB          11           seq.extend(fib_seq(n - 1))
+    21     19.9 MiB      0.0 MiB          12       seq.append(fib(n))
+    22     19.9 MiB      0.0 MiB          12       return seq
+
+
+Filename: C:\Users\andre\code\projects\python\effektiv-pythonprogrammering\09-15\memory_log.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    16     19.8 MiB     19.8 MiB          13   @memory_profiler.profile(stream=log)
+    17                                         def fib_seq(n):
+    18     19.8 MiB      0.0 MiB          13       seq = []
+    19     19.8 MiB      0.0 MiB          13       if n > 0:
+    20     19.9 MiB      0.0 MiB          12           seq.extend(fib_seq(n - 1))
+    21     19.9 MiB      0.0 MiB          13       seq.append(fib(n))
+    22     19.9 MiB      0.0 MiB          13       return seq
+
+
+Filename: C:\Users\andre\code\projects\python\effektiv-pythonprogrammering\09-15\memory_log.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    16     19.8 MiB     19.8 MiB          14   @memory_profiler.profile(stream=log)
+    17                                         def fib_seq(n):
+    18     19.8 MiB      0.0 MiB          14       seq = []
+    19     19.8 MiB      0.0 MiB          14       if n > 0:
+    20     19.9 MiB      0.0 MiB          13           seq.extend(fib_seq(n - 1))
+    21     19.9 MiB      0.0 MiB          14       seq.append(fib(n))
+    22     19.9 MiB      0.0 MiB          14       return seq
+
+
+Filename: C:\Users\andre\code\projects\python\effektiv-pythonprogrammering\09-15\memory_log.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    16     19.8 MiB     19.8 MiB          15   @memory_profiler.profile(stream=log)
+    17                                         def fib_seq(n):
+    18     19.8 MiB      0.0 MiB          15       seq = []
+    19     19.8 MiB      0.0 MiB          15       if n > 0:
+    20     19.9 MiB      0.0 MiB          14           seq.extend(fib_seq(n - 1))
+    21     19.9 MiB      0.0 MiB          15       seq.append(fib(n))
+    22     19.9 MiB      0.0 MiB          15       return seq
+
+
+Filename: C:\Users\andre\code\projects\python\effektiv-pythonprogrammering\09-15\memory_log.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    16     19.8 MiB     19.8 MiB          16   @memory_profiler.profile(stream=log)
+    17                                         def fib_seq(n):
+    18     19.8 MiB      0.0 MiB          16       seq = []
+    19     19.8 MiB      0.0 MiB          16       if n > 0:
+    20     19.9 MiB      0.0 MiB          15           seq.extend(fib_seq(n - 1))
+    21     19.9 MiB      0.0 MiB          16       seq.append(fib(n))
+    22     19.9 MiB      0.0 MiB          16       return seq
+
+
+Filename: C:\Users\andre\code\projects\python\effektiv-pythonprogrammering\09-15\memory_log.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    16     19.8 MiB     19.8 MiB          17   @memory_profiler.profile(stream=log)
+    17                                         def fib_seq(n):
+    18     19.8 MiB      0.0 MiB          17       seq = []
+    19     19.8 MiB      0.0 MiB          17       if n > 0:
+    20     19.9 MiB      0.0 MiB          16           seq.extend(fib_seq(n - 1))
+    21     19.9 MiB      0.0 MiB          17       seq.append(fib(n))
+    22     19.9 MiB      0.0 MiB          17       return seq
+
+
+Filename: C:\Users\andre\code\projects\python\effektiv-pythonprogrammering\09-15\memory_log.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    16     19.8 MiB     19.8 MiB          18   @memory_profiler.profile(stream=log)
+    17                                         def fib_seq(n):
+    18     19.8 MiB      0.0 MiB          18       seq = []
+    19     19.8 MiB      0.0 MiB          18       if n > 0:
+    20     19.9 MiB      0.0 MiB          17           seq.extend(fib_seq(n - 1))
+    21     19.9 MiB      0.0 MiB          18       seq.append(fib(n))
+    22     19.9 MiB      0.0 MiB          18       return seq
+
+
+Filename: C:\Users\andre\code\projects\python\effektiv-pythonprogrammering\09-15\memory_log.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    16     19.8 MiB     19.8 MiB          19   @memory_profiler.profile(stream=log)
+    17                                         def fib_seq(n):
+    18     19.8 MiB      0.0 MiB          19       seq = []
+    19     19.8 MiB      0.0 MiB          19       if n > 0:
+    20     19.9 MiB      0.0 MiB          18           seq.extend(fib_seq(n - 1))
+    21     19.9 MiB      0.0 MiB          19       seq.append(fib(n))
+    22     19.9 MiB      0.0 MiB          19       return seq
+
+
+Filename: C:\Users\andre\code\projects\python\effektiv-pythonprogrammering\09-15\memory_log.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    16     19.8 MiB     19.8 MiB          20   @memory_profiler.profile(stream=log)
+    17                                         def fib_seq(n):
+    18     19.8 MiB      0.0 MiB          20       seq = []
+    19     19.8 MiB      0.0 MiB          20       if n > 0:
+    20     19.9 MiB      0.0 MiB          19           seq.extend(fib_seq(n - 1))
+    21     19.9 MiB      0.0 MiB          20       seq.append(fib(n))
+    22     19.9 MiB      0.0 MiB          20       return seq
+
+
+Filename: C:\Users\andre\code\projects\python\effektiv-pythonprogrammering\09-15\memory_log.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    16     19.8 MiB     19.8 MiB          21   @memory_profiler.profile(stream=log)
+    17                                         def fib_seq(n):
+    18     19.8 MiB      0.0 MiB          21       seq = []
+    19     19.8 MiB      0.0 MiB          21       if n > 0:
+    20     19.9 MiB      0.0 MiB          20           seq.extend(fib_seq(n - 1))
+    21     19.9 MiB      0.0 MiB          21       seq.append(fib(n))
+    22     19.9 MiB      0.0 MiB          21       return seq
+
+
