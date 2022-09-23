@@ -2,7 +2,7 @@ from person import Person
 
 
 class Student(Person):
-    def __init__(self, name: str, birthday: str, subjects: list[str], commute: str) -> None:
-        super().__init__(name, birthday)
+    def __init__(self, _id: str, name: str, birthdate: str, subjects: list[str], commute: str) -> None:
+        super().__init__(_id, name, birthdate)
         self.subjects = subjects
         self.commute = commute

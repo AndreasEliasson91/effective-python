@@ -1,38 +1,34 @@
 from dataclasses import dataclass, field
-from typing import Any
-from schedule import Schedule
+from lesson import Schedule
 
 
 class Person:
-    __slots__ = ('_id', 'name', 'birthday', '_schedule')
+    __slots__ = ('__id', 'name', 'birthdate', 'schedule')
 
-    def __init__(self, name: str, birthday: str) -> None:
-        self._id = None
-        self.name = name
-        self.birthday = birthday
-        self._schedule = Schedule()
+    def __init__(self, _id: str, name: str, birthdate: str) -> None:
+        self.__id: str = _id
+        self.name: str = name
+        self.birthdate: str = birthdate
+        self.schedule: Schedule = Schedule()
 
     @property
     def id(self) -> str:
-        return self._id
+        return self.__id
 
-    @id.setter
-    def id(self, _id: str) -> None:
-        self._id = _id
-
-    @property
-    def schedule(self) -> Schedule:
-        return self._schedule
-
-    @schedule.setter
-    def schedule(self, blocks: dict) -> None:
-        self._schedule.create_schedule(**blocks)
+    # def create_schedule(self, schedule: dict) -> None:
+    #     self.schedule = schedule
+    #
+    # def update_schedule(self, **kwargs) -> None:
+    #     for k, v in kwargs.items():
+    #         for slot, lesson in self.schedule.items():
+    #             if slot == k:
+    #                 lesson = v
 
 
-@dataclass
+@dataclass(order=True)
 class Personnel:
-    staff: list[Any] = field(default_factory=list)
-    students: list[Any] = field(default_factory=list)
+    staff: list[Person] = field(default_factory=list)
+    students: list[Person] = field(default_factory=list)
     number_of_staff: int = 0
     number_of_students: int = 0
 
@@ -43,9 +39,3 @@ class Personnel:
     def get_student_id(self) -> str:
         self.number_of_students += 1
         return 'STU' + str(self.number_of_students)
-
-    def add_staff(self) -> None:
-        pass
-
-    def add_student(self) -> None:
-        pass
