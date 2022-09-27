@@ -1,26 +1,54 @@
+import time
+from item import Item
+from order import Order, PaymentMethod
+from user import Distributor, User
+
+
 class LogisticsSystem:
-    @staticmethod
-    def take_an_order():
-        print('Taking order')
+    def __init(self) -> None:
+        self.orders_in_progress: list[Order] = []
+        self.customers: list[User] = []
 
-    @staticmethod
-    def take_orders():
-        print('Taking orders')
+    def take_order(self):
+        print('Enter order information:\n')
+        time.sleep(3)
+        order = {
+            'priority': 2,
+            'sender': Distributor(),
+            'buyer': User(
+                name='Anna Andersson',
+                address='This Is The Address 00, 112 00 Newtown',
+                phone_number='112 000',
+                email='aa@newtown-mail.com'
+            ),
+            'items': [
+                Item(10.0, 26.8, (30, 30, 30)),
+                Item(25.9, 12.3, (14, 15, 15))
+            ],
+            'payment_method': PaymentMethod.CREDIT_CARD
+        }
+        print('Thanks!')
+        temp_order = Order(
+            priority=order['priority'],
+            sender=order['sender'],
+            buyer=order['buyer'],
+            items=order['items'],
+            payment_method=order['payment_method'],
+        )
+        self.process_an_order()
+        self.orders_in_progress.append(temp_order)
+        print(f'Order number: {temp_order.id}')
 
-    @staticmethod
-    def process_an_order():
-        print('Process order')
+    def process_an_order(self):
+        print('Processing order...')
 
-    @staticmethod
-    def track_order(order_no: str):
+    def track_order(self, order_no: str):
         print('Track order')
 
-    @staticmethod
-    def cancel_order(order_no: str):
+    def cancel_order(self, order_no: str):
         print('Cancel Order')
 
-    @staticmethod
-    def register_new_user():
+    def register_new_user(self):
         print('Register USer')
 
 
@@ -46,7 +74,7 @@ class CLI_GUI:
             case 1:
                 system.register_new_user()
             case 2:
-                system.take_orders()
+                system.take_order()
             case 3:
                 order_no = input('Enter the order number to track:\n>> ')
                 system.track_order(order_no)
