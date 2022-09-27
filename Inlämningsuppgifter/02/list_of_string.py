@@ -1,7 +1,7 @@
 from typing import Any
 
 
-class ListOfStrings(list):
+class ListOfString(list):
     def __init__(self, _list: list[Any]) -> None:
         self._obj = [str(element) for element in _list]
 
@@ -15,23 +15,20 @@ class ListOfStrings(list):
         return f'{[element for element in self.obj]}'
 
     def __add__(self, element: Any):
-        print(f'Add {element}')
         if isinstance(element, list):
-            return ListOfStrings(self.obj + [str(e) for e in element])
+            return ListOfString(self.obj + [str(e) for e in element])
         else:
-            return ListOfStrings(self.obj + [str(element)])
+            return ListOfString(self.obj + [str(element)])
 
-    def __iadd__(self, element: Any):
-        print(f'Iadd {element}')
+    def __iadd__(self, element: Any) -> list[str]:
         if isinstance(element, list):
             self.obj += [str(e) for e in element]
         else:
             self.obj += [str(element)]
         return self.obj
 
-    def __radd__(self, element):
-        print(f'Radd {element}')
-        return element + self.obj
+    def __radd__(self, _obj) -> list[str]:
+        return _obj + self.obj
 
     @ property
     def obj(self):
