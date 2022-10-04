@@ -1,3 +1,4 @@
+from collections import UserList
 from typing import Any
 
 
@@ -49,13 +50,9 @@ class ListOfString(list):
         if the lists aren't the same length
         """
         if len(self) > len(_list):
-            temp = self[len(_list):]
-            self = self[:len(_list)]
-            return self, _list, temp
-
+            return ListOfString(self[:len(_list)]), _list, self[len(_list):]
         elif len(self) < len(_list):
             return self, _list[:len(self)], _list[len(self):]
-
         return self, _list, []
 
     def _update_string_values(self, _list: list[Any]) -> list[Any]:
@@ -68,10 +65,33 @@ class ListOfString(list):
         temp = []
 
         for i, element in enumerate(self):
-            if (element.isdigit()) \
-                    and (isinstance(_list[i], (int, float)) or _list[i].isdigit()):
+            if (isinstance(_list[i], (int, float)) or _list[i].isdigit()) \
+                    and (element.isdigit()):
                 temp.append(int(element) + int(_list[i]))
             else:
                 temp.append(element + str(_list[i]))
 
         return temp
+
+
+class ListOfUserString(UserList):
+    def __init__(self, _list: list[Any]) -> None:
+        super().__init__([str(element) for element in _list])
+
+    def __getitem__(self, index: int) -> str:
+        return super().__getitem__(index)
+
+    def __setitem__(self, index: int, element: Any) -> None:
+        super().__setitem__(index, element)
+
+    def __repr__(self) -> str:
+        return f'{[element for element in self]}'
+
+    def append(self, element: Any) -> None:
+        super().append(str(element))
+
+    def extend(self, _list: list[Any]) -> None:
+        super().extend([str(element) for element in _list])
+
+    def insert(self, index: int, element: Any) -> None:
+        super().insert(index, str(element))

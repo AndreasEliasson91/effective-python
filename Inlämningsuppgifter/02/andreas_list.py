@@ -3,30 +3,22 @@ from typing import Any
 
 class AndreasList(list):
     def __init__(self, _list: list[Any]) -> None:
-        self._data = _list
+        super().__init__(_list)
 
     def __getitem__(self, index: int) -> Any:
-        return self.data[index]
+        return super().__getitem__(index)
 
     def __setitem__(self, index: int, element: Any) -> None:
-        self.data[index] = element
+        super().__setitem__(index, element)
 
     def __repr__(self) -> str:
-        return f'{[item for item in self.data]}'
-
-    @property
-    def data(self) -> list[Any]:
-        return self._data
-
-    @data.setter
-    def data(self, _list: list[Any]) -> None:
-        self._data = _list
+        return f'{[item for item in self]}'
 
     def filter_it(self, predicate) -> list[Any]:
-        return list(filter(predicate, self.for_each_item(str)))
+        return AndreasList(filter(predicate, self.for_each_item(str)))
 
     def for_each_item(self, func) -> list[Any]:
-        return [func(item) for item in self.data]
+        return [func(item) for item in self]
 
     def join_it(self) -> str:
         return ' '.join(self.for_each_item(str))
