@@ -1,40 +1,43 @@
-from typing import Union
+from typing import Any, Union
 
 
 class ListOfNum(list):
     def __init__(self, _list: list[Union[int, float, complex]]) -> None:
-        for item in _list:
-            if not isinstance(item, (int, float, complex)):
-                raise TypeError(f'Numeric value expected, got {type(item)}')
-
-        self._obj = _list
+        self._data = [self._check_if_numeric_value(e) for e in _list]
 
     def __getitem__(self, index: int) -> Union[int, float, complex]:
-        return self.obj[index]
+        return self.data[index]
 
     def __setitem__(self, index: int, element: Union[int, float, complex]) -> None:
-        self.obj[index] = element
+        self.data[index] = element
 
     def __repr__(self) -> str:
-        return f'{[element for element in self.obj]}'
+        return f'{[element for element in self.data]}'
 
     @ property
-    def obj(self):
-        return self._obj
+    def data(self):
+        return self._data
 
-    @ obj.setter
-    def obj(self, value: list[Union[int, float, complex]]) -> None:
-        for item in value:
-            if not isinstance(item, (int, float, complex)):
-                raise TypeError(f'Numeric value expected, got {type(item)}')
-
-        self._obj = value
+    @ data.setter
+    def data(self, _list: list[Union[int, float, complex]]) -> None:
+        self._data = [self._check_if_numeric_value(e) for e in _list]
 
     def append(self, element: Union[int, float, complex]) -> None:
-        self.obj += [element]
+        self.data += [self._check_if_numeric_value(element)]
 
-    def extend(self, elements: list[Union[int, float, complex]]) -> None:
-        self.obj += elements
+    def extend(self, _list: list[Union[int, float, complex]]) -> None:
+        if isinstance(_list, type(self.data)):
+            self.data += _list
+        else:
+            temp = [self._check_if_numeric_value(e) for e in _list]
+            self.data += temp
 
     def insert(self, index: int, element: Union[int, float, complex]) -> None:
-        self.obj = self.obj[:index] + [element] + self.obj[index:]
+        self.data = self.data[:index] + [self._check_if_numeric_value(element)] \
+                    + self.data[index:]
+
+    @staticmethod
+    def _check_if_numeric_value(value: Any) -> Union[int, float, complex]:
+        if not isinstance(value, (int, float, complex)):
+            raise TypeError(f'Numeric value expected, got {type(value)}')
+        return value
