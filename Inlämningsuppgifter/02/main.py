@@ -87,16 +87,19 @@ class Demonstration:
         # Output: 184.33774470000026
         _import = 'from list_of_string import ListOfString'
         test_code = 'list_of_string = ListOfString([]);list_of_string.extend([i for i in range(100_000)])'
+        print('Time For ListOfString:', end=' ')
         print(timeit.timeit(stmt=test_code, setup=_import, number=10_000))
 
         # Output: 181.6198072999996
         _import = 'from list_of_user_string import ListOfUserString'
         test_code = 'list_of_user_string = ListOfUserString([]);list_of_user_string.extend([i for i in range(100_000)])'
+        print('Time For ListOfUserString:', end=' ')
         print(timeit.timeit(stmt=test_code, setup=_import, number=10_000))
 
 
 def main():
     demonstration = Demonstration()
+
     demonstration.demonstrate_list_of_string()
     demonstration.demonstrate_list_of_num()
     demonstration.demonstrate_andreas_list()
