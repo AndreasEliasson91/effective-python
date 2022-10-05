@@ -91,7 +91,7 @@ class Demonstration:
         print(timeit.timeit(stmt=test_code, setup=_import, number=10_000))
 
         # Output: 181.6198072999996
-        _import = 'from list_of_user_string import ListOfUserString'
+        _import = 'from list_of_string import ListOfUserString'
         test_code = 'list_of_user_string = ListOfUserString([]);list_of_user_string.extend([i for i in range(100_000)])'
         print('Time For ListOfUserString:', end=' ')
         print(timeit.timeit(stmt=test_code, setup=_import, number=10_000))
